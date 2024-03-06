@@ -1,0 +1,24 @@
+{
+  "name": "course",
+  "version": "1.0.0",
+  "scripts": {
+    "database:load:kommuner": "docker exec -i /postgis /usr/bin/psql --user postgres norway_data < tmp/Basisdata_0000_Norge_25833_Kommuner_PostGIS.sql",
+    "dev": "vite",
+    "build": "npm test && vite build",
+    "test": "prettier --check . && tsc --noEmit",
+    "prettier:update": "prettier --write .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.63",
+    "@types/react-dom": "^18.2.20",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.5"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
